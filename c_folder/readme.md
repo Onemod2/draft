@@ -2,4 +2,4 @@
 
 ## Algorithm:
 > - Deikstra searching nearest path on graph (Deikstra)
-> - Pyramid sort ( complexity of computation - O(log(n)) )
+> - Pyramid sort ( computation complexity - O(log(n)) )

@@ -1,4 +1,4 @@
-# *Some files wrote on cpp**
+# *Some files wrote on cpp*
 
 ## Class-homework (garbage version)
 
