@@ -44,9 +44,9 @@ class MainWindow(tk.Tk):
 
         self.canvas = tk.Canvas(self, width=width, height=height)
 
-        self.current_map = map.Map("map.png", 32, 32, RESIZE_SIDE, RESIZE_SIDE)
+        self.current_map = map.Map("./pictures/map.png", 32, 32, RESIZE_SIDE, RESIZE_SIDE)
         self.map_ids = []
-        self.char = charter.Char("1.png", int(w)/2, int(h)/2)
+        self.char = charter.Char("./pictures/first_type_of_char.png", int(w)/2, int(h)/2)
 
         self.my_ip = get_ip_by_server(self.char)
 
