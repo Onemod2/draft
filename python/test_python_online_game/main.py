@@ -18,19 +18,20 @@ MAX_SPEED = 50
 
 STD_SPEED = 2
 
-SERVER_IP = "192.168.31.77"
-SERVER_PORT = 24
+SERVER_IP = "127.0.0.1"
+SERVER_PORT = 1234
 
 
 def get_ip_by_server(char, ip=SERVER_IP, port=SERVER_PORT):
-    with socket.create_connection((ip, port)) as s:
-        s.send(pickle.dumps(char))
+		return ""
+""" with socket.create_connection((ip, port)) as s:
+			s.send(pickle.dumps(char))
 
-        data = s.recv(1024)
-        my_ip = data.decode().strip()
+			data = s.recv(1024)
+			my_ip = data.decode().strip()
 
-        return my_ip
-
+			return my_ip 
+"""
 
 class MainWindow(tk.Tk):
     def __init__(self, width: int, height: int):
@@ -65,15 +66,16 @@ class MainWindow(tk.Tk):
         return char_id
 
     def get_coord(self, ip=SERVER_IP, port=SERVER_PORT):
-        with socket.create_connection((ip, port)) as s:
-
-            current_char = self.char.copy_obj()
-            s.send(pickle.dumps(current_char))
-
-            data = s.recv(1024)
-        self.coord = pickle.loads(data)
-        del(self.coord[self.my_ip])
-
+        '''
+					with socket.create_connection((ip, port)) as s:
+							current_char = self.char.copy_obj()
+							s.send(pickle.dumps(current_char))
+							data = s.recv(1024)
+					self.coord = pickle.loads(data)
+					del(self.coord[self.my_ip])
+        '''
+        pass
+			
     def animation_another_player(self):
         self.get_coord()
         self.add_chars_to_cnv()
